@@ -5,6 +5,7 @@
       <h1 class="title">
         nuxt-app
       </h1>
+      <NuxtLink to="/posts">NuxtLinked</NuxtLink>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -28,7 +29,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head () {
+    
+  }
+}
 </script>
 
 <style>
