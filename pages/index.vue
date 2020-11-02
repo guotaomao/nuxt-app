@@ -6,10 +6,18 @@
 </template>
 
 <script>
+import {getUserInfo} from '@/api/user'
+
 export default {
   head () {
     
   },
+  async asyncData (ocntext) {
+        console.log('context', context)
+        let data = await getUserInfo()
+        console.log('data', data)
+        return { content: 'created at' + new Date() }
+    },
    mounted() {
   }
 }

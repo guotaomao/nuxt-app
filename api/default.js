@@ -1,4 +1,4 @@
-import axios from '@nuxtjs/axios'
+import axios from 'axios'
 import { headers } from './config'
 const instance = axios.create({
     // baseURL: baseURL,
