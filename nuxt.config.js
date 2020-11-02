@@ -18,13 +18,13 @@ export default {
 
   },
   loading: {
-    color: 'blue',
-    height: '5px'
+    // color: 'blue',
+    // height: '5px'
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     'element-ui/lib/theme-chalk/index.css',
-     // 项目里要使用的 less 文件
+     // 项目里要使用的 normalize.css 文件
     //  '@/assets/css/reset.less',
      '@/assets/css/normalize.css'
   ],
@@ -43,8 +43,21 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
-
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': {
+      // target: 'http://example.com',
+      target: 'http://127.0.0.1:7001',
+      pathRewrite: {
+        '^/api' : '/'
+      }
+    }
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: [/^element-ui/],

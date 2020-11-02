@@ -15,5 +15,6 @@
     "less-loader": "^7.0.2",
     "nuxt": "^2.14.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  }
 }
