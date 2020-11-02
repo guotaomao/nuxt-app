@@ -13,10 +13,20 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+   // custom set up router
+  router: {
 
+  },
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+     // 项目里要使用的 less 文件
+    //  '@/assets/css/reset.less',
+     '@/assets/css/normalize.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -38,5 +48,9 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: [/^element-ui/],
+  },
+  server:{
+    host: '127.0.0.1',
+    port: 8888,
   }
 }
