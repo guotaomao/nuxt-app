@@ -1,3 +1,4 @@
+require('dotenv').config()
 export default {
   target: 'static',
   // ssr: true,
@@ -50,15 +51,15 @@ export default {
   },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    // '@nuxtjs/axios',
+    // '@nuxtjs/proxy'
   ],
-  axios: {
-    proxy: true,
-  },
-  proxy: {
-    '/api': {
-      target: 'http://127.0.0.1:7001',
-    }
-  }
+  // axios: {
+  //   proxy: true,
+  // },
+  // proxy: {
+  //   '/api': {
+  //     target: 'http://127.0.0.1:7001',
+  //   }
+  // }
 }

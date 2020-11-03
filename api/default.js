@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { headers } from './config'
 const instance = axios.create({
-    // baseURL: baseURL,
+    baseURL: process.env.NODE_ENV === 'development' ? process.env.BASE_URL : process.env.BASE_URL,
     headers: { ...headers },
     timeout: 1000
 })
@@ -21,7 +21,7 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
     (response) => {
         // 对响应数据做点事
-        console.log('response', response)
+        console.log('response', process.env)
         return response
     },
     (error) => {

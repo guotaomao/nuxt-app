@@ -12,10 +12,10 @@ export default {
   head () {
     
   },
-  async asyncData (ocntext) {
-        console.log('context', context)
+  async asyncData (context) {
+        // console.log('context', context)
         let data = await getUserInfo()
-        console.log('data', data)
+        // console.log('data', data)
         return { content: 'created at' + new Date() }
     },
    mounted() {
